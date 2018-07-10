@@ -10,7 +10,7 @@
         <my-element></my-element>
         <button>cause myelement render</button>
         <script>
-            document.querySelector('button').addEventListener('click', ()=>{
+            document.querySelector('button').addEventListener('click', function() {
                 console.log('click');
                 document.querySelector('my-element').bool = true;
             });

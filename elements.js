@@ -58,4 +58,5 @@ class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 customElements.define('my-child', MyChild);
 customElements.define('my-slot', MySlot);
-console.log('hi');
+console.log('Elements loaded');
+alert('Elements loaded');
