@@ -1,5 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import babel from 'rollup-plugin-babel';
 
 export default [{
     input: './elements.js',
@@ -14,5 +15,13 @@ export default [{
     plugins: [
         resolve({browser: true}),
         commonjs(),
+        babel({
+            presets: [
+                ['@babel/preset-env', {
+                    modules: false,
+                    targets: { "ie": 11 }
+                }]
+            ],
+        }),
     ],
 }]
